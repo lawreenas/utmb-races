@@ -1,0 +1,849 @@
+{
+  "updatedAt": "2026-11-16",
+  "routes": [
+    {
+      "id": "adlerweg",
+      "name": "Adlerweg (Eagle Walk)",
+      "region": "North Tyrol",
+      "countries": [
+        "Austria"
+      ],
+      "start": "St. Johann in Tirol",
+      "end": "St. Christoph am Arlberg",
+      "distance": 330,
+      "elevationGain": 22000,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        24,
+        24
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Usual hut season, mid-Jun to late Sep (not official)",
+      "accommodation": "Alpine club huts and valley guesthouses",
+      "difficulty": "challenging",
+      "difficultyNote": "All stages marked; black stages in the Lechtal Alps need alpine experience",
+      "booking": "Book huts individually; optional digital stamp pass",
+      "link": "https://www.tirol.at/aktivitaeten/sport/wandern/weitwanderwege/anspruchsvolle-weitwanderwege/adlerweg",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/adlerweg-gesamtverlauf",
+        "https://www.bergwelten.com/a/der-adlerweg-in-tirol"
+      ]
+    },
+    {
+      "id": "alta-via-1",
+      "name": "Alta Via 1",
+      "region": "Dolomites",
+      "countries": [
+        "Italy"
+      ],
+      "start": "Lago di Braies",
+      "end": "Belluno",
+      "distance": 125,
+      "elevationGain": 7300,
+      "highestPoint": 2752,
+      "highestPointName": "Rifugio Lagazuoi",
+      "days": [
+        8,
+        12
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Rifugi open Jun–Sep",
+      "accommodation": "Mountain rifugi",
+      "difficulty": "moderate",
+      "difficultyNote": "Mostly not demanding; short protected sections with bypasses",
+      "booking": "Popular rifugi fill in Jul–Aug; book well ahead",
+      "link": "https://www.dolomiti.it/it/itinerari/alte-vie/alta-via-n1",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.dolomiti.it/it/itinerari/alte-vie/alta-via-n1"
+      ]
+    },
+    {
+      "id": "alta-via-2",
+      "name": "Alta Via 2",
+      "region": "Dolomites",
+      "countries": [
+        "Italy"
+      ],
+      "start": "Bressanone",
+      "end": "Feltre",
+      "distance": 180,
+      "elevationGain": 11300,
+      "highestPoint": 2932,
+      "highestPointName": "Passo delle Farangole",
+      "days": [
+        12,
+        13
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Rifugi open Jun–Sep",
+      "accommodation": "Mountain rifugi",
+      "difficulty": "demanding",
+      "difficultyNote": "Via ferrata kit needed (Farangole, Pale di San Martino); exposed",
+      "booking": "Book rifugi well ahead for Jul–Aug",
+      "link": "https://www.dolomiti.it/en/itineraries/alpine-paths-of-the-dolomites/high-route-2",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": true,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.dolomiti.it/en/itineraries/alpine-paths-of-the-dolomites/high-route-2",
+        "https://www.cicerone.co.uk/alta-via-2-dolomites-a-complete-planning-guide"
+      ]
+    },
+    {
+      "id": "anillo-de-picos",
+      "name": "Anillo de Picos",
+      "region": "Picos de Europa",
+      "countries": [
+        "Spain"
+      ],
+      "start": "Picos de Europa",
+      "end": "Picos de Europa",
+      "distance": 115,
+      "elevationGain": null,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        7,
+        9
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonNote": "Official season 1 Jun – 15 Oct",
+      "accommodation": "Guarded mountain refuges (9)",
+      "difficulty": "demanding",
+      "difficultyNote": "Steep, exposed karst limestone; shorter official variants exist",
+      "booking": "Book refuges 8–10 weeks ahead (3–5 months for Verónica and Andara)",
+      "link": "https://elanillodepicos.com/home/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://elanillodepicos.com/home/"
+      ]
+    },
+    {
+      "id": "berliner-hohenweg",
+      "name": "Berliner Höhenweg",
+      "region": "Zillertal Alps",
+      "countries": [
+        "Austria"
+      ],
+      "start": "Finkenberg",
+      "end": "Mayrhofen",
+      "distance": 71,
+      "elevationGain": 5300,
+      "highestPoint": 3133,
+      "highestPointName": "Schönbichler Horn",
+      "days": [
+        7,
+        8
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Huts typically open early summer to late Sep (not official)",
+      "accommodation": "Alpine club huts (8)",
+      "difficulty": "demanding",
+      "difficultyNote": "Sure-footedness and head for heights; snowfields possible",
+      "booking": "Book each hut directly; Olpererhütte is very busy",
+      "link": "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/weitwanderung-berliner-hoehenweg",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/weitwanderung-berliner-hoehenweg",
+        "https://www.bergwelten.com/a/berliner-hoehenweg-in-8-etappen-durch-die-zillertaler-alpen"
+      ]
+    },
+    {
+      "id": "carros-de-foc",
+      "name": "Carros de Foc",
+      "region": "Aigüestortes, Catalan Pyrenees",
+      "countries": [
+        "Spain"
+      ],
+      "start": "Aigüestortes i Estany de Sant Maurici",
+      "end": "Aigüestortes i Estany de Sant Maurici",
+      "distance": 65,
+      "elevationGain": 9200,
+      "highestPoint": 2745,
+      "highestPointName": "Coll de Contraix",
+      "days": [
+        5,
+        7
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Refuges guarded about Jun–Sep; some close earlier",
+      "accommodation": "Guarded mountain refuges (9)",
+      "difficulty": "challenging",
+      "difficultyNote": "Granite passes at 2,400–2,750 m with boulder fields; start anywhere, either direction",
+      "booking": "Book via the official Carros de Foc reservation centre well ahead",
+      "link": "https://www.carrosdefoc.com/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.carrosdefoc.com/es/carros-de-foc/"
+      ]
+    },
+    {
+      "id": "e5-oberstdorf-merano",
+      "name": "E5 Oberstdorf → Merano",
+      "region": "Allgäu, Lechtal and Ötztal Alps",
+      "countries": [
+        "Germany",
+        "Austria",
+        "Italy"
+      ],
+      "start": "Oberstdorf",
+      "end": "Merano",
+      "distance": 120,
+      "elevationGain": 7900,
+      "highestPoint": 3019,
+      "highestPointName": "Similaunhütte",
+      "days": [
+        6,
+        6
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "July to mid-Oct; not before July (3,000 m passes)",
+      "accommodation": "Alpine club huts and valley inns",
+      "difficulty": "challenging",
+      "difficultyNote": "Buses and cable cars bridge parts of several stages (~6,000 m of the ascent on foot)",
+      "booking": "Very popular; reserve huts well in advance",
+      "link": "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/weitwanderweg-e5",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "road"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.bergwelten.com/a/die-alpenueberquerung-von-oberstdorf-nach-meran"
+      ]
+    },
+    {
+      "id": "gr11",
+      "name": "GR11 – Senda Pirenaica",
+      "region": "Spanish Pyrenees",
+      "countries": [
+        "Spain",
+        "Andorra"
+      ],
+      "start": "Cabo Higuer",
+      "end": "Cap de Creus",
+      "distance": null,
+      "elevationGain": null,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        45,
+        47
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Summer traverse; refuge dates vary",
+      "accommodation": "Refuges, village hostels and camping",
+      "difficulty": "demanding",
+      "difficultyNote": "Long traverse with high central passes. Sources give 820–850 km, 39,000–43,000 m",
+      "booking": "Book central-Pyrenees refuges ahead in summer",
+      "link": null,
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": true,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.picuco.com/en-es/blog/the-gr-11-planning-the-full-trans-pyrenean-traverse-from"
+      ]
+    },
+    {
+      "id": "gr20",
+      "name": "GR20",
+      "region": "Corsica",
+      "countries": [
+        "France"
+      ],
+      "start": "Calenzana",
+      "end": "Conca",
+      "distance": 180,
+      "elevationGain": 12000,
+      "highestPoint": 2607,
+      "highestPointName": "Pointe des Éboulis",
+      "days": [
+        15,
+        16
+      ],
+      "season": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonNote": "Refuges open mid-May to early Oct; snow near Pointe des Éboulis into June",
+      "accommodation": "PNRC refuges and bivouac pitches",
+      "difficulty": "demanding",
+      "difficultyNote": "Rocky, steep, with scrambling; wild camping banned",
+      "booking": "Everything (incl. bivouac) must be booked online with PNRC; opens around 20 Jan",
+      "link": "https://www.pnr.corsica/",
+      "terrain": [
+        "mountain",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.ffrandonnee.fr/s-informer/actualites/gr-20-ouverture-des-reservations-pour-la-saison-2026"
+      ]
+    },
+    {
+      "id": "gr221",
+      "name": "GR221 – Ruta de Pedra en Sec",
+      "region": "Serra de Tramuntana, Mallorca",
+      "countries": [
+        "Spain"
+      ],
+      "start": "Port d'Andratx",
+      "end": "Pollença",
+      "distance": 140,
+      "elevationGain": null,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        8,
+        10
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12
+      ],
+      "seasonNote": "Usually walked outside the summer heat (not official); check section closures",
+      "accommodation": "Consell de Mallorca refuges and village hotels",
+      "difficulty": "moderate",
+      "difficultyNote": "Mostly dry-stone mule tracks with some rocky sections",
+      "booking": "Book the Consell de Mallorca refuges online",
+      "link": "https://seu.conselldemallorca.net/refugis/en/ruta/",
+      "terrain": [
+        "mountain",
+        "hikingTrail",
+        "woods",
+        "hill"
+      ],
+      "done": true,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://seu.conselldemallorca.net/refugis/en/ruta/",
+        "https://www.cicerone.co.uk/trekking-in-mallorca"
+      ]
+    },
+    {
+      "id": "high-scardus-trail",
+      "name": "High Scardus Trail",
+      "region": "Šar, Korab and Deshat mountains",
+      "countries": [
+        "North Macedonia",
+        "Kosovo",
+        "Albania"
+      ],
+      "start": "Staro Selo",
+      "end": "Saint Naum",
+      "distance": 314,
+      "elevationGain": null,
+      "highestPoint": 2764,
+      "highestPointName": "Mt Korab (optional summit)",
+      "days": [
+        20,
+        22
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Late Jun to end of Sep; September is best",
+      "accommodation": "Village guesthouses and some huts",
+      "difficulty": "demanding",
+      "difficultyNote": "Remote, 8 border crossings, some long stages",
+      "booking": "Fixed-date border permits (apply 2–8 weeks ahead); very limited beds at some stops",
+      "link": "https://highscardustrail.com/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "road"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.cicerone.co.uk/hiking-the-high-scardus-trail-a-complete-planning-guide"
+      ]
+    },
+    {
+      "id": "hrp",
+      "name": "HRP – Haute Randonnée Pyrénéenne",
+      "region": "Pyrenees",
+      "countries": [
+        "France",
+        "Spain",
+        "Andorra"
+      ],
+      "start": "Hendaye",
+      "end": "Banyuls-sur-Mer",
+      "distance": 800,
+      "elevationGain": 45000,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        25,
+        45
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Best Jul–Sep; early-season snow",
+      "accommodation": "Refuges, camping and bivouac",
+      "difficulty": "demanding",
+      "difficultyNote": "Off-trail, unmarked high-mountain sections; navigation needed",
+      "booking": null,
+      "link": "https://en.tourisme-hautes-pyrenees.com/the-mountains-in-summer/hiking-in-the-hautes-pyrenees/the-legendary-gr-and-footpaths/the-hrp/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://en.tourisme-hautes-pyrenees.com/the-mountains-in-summer/hiking-in-the-hautes-pyrenees/the-legendary-gr-and-footpaths/the-hrp/",
+        "https://www.cicerone.co.uk/the-pyrenean-haute-route"
+      ]
+    },
+    {
+      "id": "jotunheimen-loop",
+      "name": "Jotunheimen hut loop",
+      "region": "Jotunheimen",
+      "countries": [
+        "Norway"
+      ],
+      "start": "Gjendesheim",
+      "end": "Gjendesheim",
+      "distance": 108,
+      "elevationGain": null,
+      "highestPoint": 2454,
+      "highestPointName": "Glittertind (optional summit)",
+      "days": [
+        6,
+        7
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Staffed DNT lodges open about mid/late Jun to mid-Sep",
+      "accommodation": "DNT staffed lodges and private lodges",
+      "difficulty": "challenging",
+      "difficultyNote": "DNT red grade; finishes over the Besseggen ridge",
+      "booking": "Book DNT lodges online (dnt.no); Spiterstulen separately",
+      "link": "https://www.dnt.no/om-dnt/english/guided-summer-tours-2024/roundtrip-in-jotunheimen/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.dnt.no/om-dnt/english/guided-summer-tours-2024/roundtrip-in-jotunheimen/"
+      ]
+    },
+    {
+      "id": "kungsleden",
+      "name": "Kungsleden (Abisko → Nikkaluokta)",
+      "region": "Swedish Lapland",
+      "countries": [
+        "Sweden"
+      ],
+      "start": "Abisko",
+      "end": "Nikkaluokta",
+      "distance": 107,
+      "elevationGain": null,
+      "highestPoint": 1150,
+      "highestPointName": "Tjäktjapasset",
+      "days": [
+        5,
+        7
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "STF huts open about mid/late Jun to mid-Sep",
+      "accommodation": "STF mountain huts and stations (camping allowed)",
+      "difficulty": "moderate",
+      "difficultyNote": "Well-marked trail with boardwalks; some huts have no shop",
+      "booking": "Book huts via STF",
+      "link": "https://www.swedishtouristassociation.com/trails/abisko-nikkaluokta/",
+      "terrain": [
+        "mountain",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.swedishtouristassociation.com/trails/abisko-nikkaluokta/"
+      ]
+    },
+    {
+      "id": "laugavegur-fimmvorduhals",
+      "name": "Laugavegur + Fimmvörðuháls",
+      "region": "South Iceland highlands",
+      "countries": [
+        "Iceland"
+      ],
+      "start": "Landmannalaugar",
+      "end": "Skógar",
+      "distance": 79,
+      "elevationGain": null,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        4,
+        6
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Trail open about 25 Jun – 15 Sep, snow permitting",
+      "accommodation": "FÍ / Útivist huts and campsites",
+      "difficulty": "challenging",
+      "difficultyNote": "River fords; ~1,000 m climb on the Fimmvörðuháls pass",
+      "booking": "Huts/campsites must be booked before starting (FÍ); packages sell out",
+      "link": "https://www.fi.is/en/hiking-trails/trails/view/laugavegur",
+      "terrain": [
+        "mountain",
+        "hikingTrail",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.fi.is/en/hiking-trails/trails/view/laugavegur",
+        "https://www.fi.is/en/moya/adverts/429"
+      ]
+    },
+    {
+      "id": "peaks-of-the-balkans",
+      "name": "Peaks of the Balkans",
+      "region": "Accursed Mountains (Prokletije)",
+      "countries": [
+        "Albania",
+        "Kosovo",
+        "Montenegro"
+      ],
+      "start": "Theth",
+      "end": "Theth",
+      "distance": 192,
+      "elevationGain": null,
+      "highestPoint": null,
+      "highestPointName": null,
+      "days": [
+        10,
+        14
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Summer to early autumn",
+      "accommodation": "Village guesthouses and some huts",
+      "difficulty": "challenging",
+      "difficultyNote": "Stages of 11–28 km with 8 border crossings",
+      "booking": "Cross-border permit required; book guesthouses ahead in peak season",
+      "link": "https://www.peaksofthebalkans.com/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": true,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.cicerone.co.uk/peaks-of-the-balkans",
+        "https://bookatrekking.com/en/blog/peaks-of-the-balkans/"
+      ]
+    },
+    {
+      "id": "stubai-hohenweg",
+      "name": "Stubai Höhenweg",
+      "region": "Stubai Alps",
+      "countries": [
+        "Austria"
+      ],
+      "start": "Starkenburger Hütte",
+      "end": "Innsbrucker Hütte",
+      "distance": 80,
+      "elevationGain": 5871,
+      "highestPoint": 2879,
+      "highestPointName": null,
+      "days": [
+        7,
+        9
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Huts open about late Jun to late Sep; snow-free from early Jul",
+      "accommodation": "Alpine club huts (8)",
+      "difficulty": "challenging",
+      "difficultyNote": "Cabled scrambles; snowfields on passes early in the season",
+      "booking": "Huts almost always full; booking essential. Bring cash",
+      "link": "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/stubaier-hoehenweg-variante-1-starkenburger-huette-innsbrucker-huette",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/stubaier-hoehenweg-variante-1-starkenburger-huette-innsbrucker-huette",
+        "https://www.bergwelten.com/a/der-stubaier-hoehenweg"
+      ]
+    },
+    {
+      "id": "tour-du-mont-blanc",
+      "name": "Tour du Mont Blanc",
+      "region": "Mont Blanc massif",
+      "countries": [
+        "France",
+        "Italy",
+        "Switzerland"
+      ],
+      "start": "Les Houches",
+      "end": "Les Houches",
+      "distance": 170,
+      "elevationGain": 10000,
+      "highestPoint": 2537,
+      "highestPointName": "Grand Col Ferret (variants reach 2,665 m)",
+      "days": [
+        7,
+        11
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Refuges open roughly mid-Jun to mid-Sep; dates vary per refuge",
+      "accommodation": "Refuges, gîtes and village hotels",
+      "difficulty": "moderate",
+      "difficultyNote": "Well-marked, non-technical; big daily climbs. Arpette/Fours variants are rougher",
+      "booking": "2027 bookings open since 15 Oct 2026 on montourdumontblanc.com; Jul–Aug fill fast",
+      "link": "https://autourdumontblanc.com/en/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://autourdumontblanc.com/en/routes",
+        "https://montourdumontblanc.com/en/actualites/booking-a-refuge-the-complete-guide"
+      ]
+    },
+    {
+      "id": "tour-monte-rosa",
+      "name": "Tour Monte Rosa",
+      "region": "Monte Rosa massif",
+      "countries": [
+        "Switzerland",
+        "Italy"
+      ],
+      "start": "Zermatt",
+      "end": "Zermatt",
+      "distance": 173,
+      "elevationGain": 10600,
+      "highestPoint": 3300,
+      "highestPointName": "Theodulpass",
+      "days": [
+        9,
+        9
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "No official season; snow lingers near Theodulpass early on",
+      "accommodation": "Mountain huts and village hotels",
+      "difficulty": "demanding",
+      "difficultyNote": "Theodul glacier crossing (crampons, rope; guide recommended); exposed Europaweg",
+      "booking": "Book huts and village accommodation in advance",
+      "link": "https://tmr-matterhorn.ch/en/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "glacier",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://tmr-matterhorn.ch/en/",
+        "https://zermatt.swiss/en/Media/Planning-hikes-tours/Tour-Monte-Rosa-Matterhorn"
+      ]
+    },
+    {
+      "id": "walkers-haute-route",
+      "name": "Walker's Haute Route",
+      "region": "Mont Blanc massif → Pennine Alps",
+      "countries": [
+        "France",
+        "Switzerland"
+      ],
+      "start": "Chamonix",
+      "end": "Zermatt",
+      "distance": 209,
+      "elevationGain": 14800,
+      "highestPoint": 2987,
+      "highestPointName": "Col de Prafleuri",
+      "days": [
+        12,
+        14
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Best mid-Jul to mid-Sep; early snow on high passes",
+      "accommodation": "Mountain huts and village hotels",
+      "difficulty": "demanding",
+      "difficultyNote": "Very big daily climbs; Pas de Chèvres ladders",
+      "booking": "Book early (Jan–Feb for private rooms); some stages have only one hut",
+      "link": null,
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.earthtrekkers.com/walkers-haute-route-things-to-know/",
+        "https://www.trailhiking.com.au/planning-guides/guide-to-the-walkers-haute-route/"
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 A minimal static web app (GitHub Pages) that lists upcoming **UTMB World Series** races and their registration availability. A second page, **Iconic Europe**, lists famous European trail races that aren't part of the UTMB World Series.
 
-Live: https://lawreenas.github.io/utmb-races/ · [Iconic Europe](https://lawreenas.github.io/utmb-races/europe.html)
+Live: https://lawreenas.github.io/utmb-races/ · [Iconic Europe](https://lawreenas.github.io/utmb-races/europe.html) · [Hut to Hut](https://lawreenas.github.io/utmb-races/huts.html)
 
 ## Features
 
@@ -18,6 +18,7 @@ Live: https://lawreenas.github.io/utmb-races/ · [Iconic Europe](https://lawreen
   | Closed | `registration_closed` |
   | Unknown | no status returned |
 - Sortable by any column (click a header; click again to reverse).
+- Click a location to open it in Google Maps (new tab).
 - **Likes**: tap ♡ on a race to like it, and tap again to unlike. The **♥ Liked** button shows only liked races and how many there are. Sorting by the ♥ column puts liked races first. Likes are saved in your browser (localStorage, by UTMB race id), so they're personal and stay through data refreshes, but they don't sync between devices or browsers.
 - Responsive: a table on desktop, cards on phones. Follows the system light/dark theme.
 
@@ -50,6 +51,20 @@ A hand-curated list of classic European races outside the UTMB World Series, for
 - Extra filters: **Entry** (first come, lottery, qualification, mixed) and **Series** (Golden Trail World Series, Skyrunner World Series, World Trail Majors, …).
 - **Category** (20K/50K/100K/100M) is derived from distance (<35, <75, <140, ≥140 km). Running Stones and continent don't apply, so they're hidden.
 - Data: `data/europe-races.json`, researched by hand from official race sites. The header shows the "Last checked" date. There's no live API and no Refresh button. Statuses change around opening and lottery dates, so always check the official site (each race name links to it).
+
+### Hut to Hut page (`huts.html`)
+Well-known multi-day routes in Europe where you sleep in huts, refuges or village guesthouses. Examples: TMB, Walker's Haute Route, Alta Via 1 and 2, GR20, HRP, Carros de Foc, Kungsleden, Laugavegur and the High Scardus Trail.
+- Columns: route (links to the official or tourism page), region, countries, start → end (both link to Google Maps), typical days, distance, D+, high point (hover for its name), season and difficulty (Moderate / Challenging / Demanding).
+- Each route has a detail line with where you sleep, season notes, booking advice and route notes.
+- Routes you've completed carry a **Done** badge, set by `done: true` in the data.
+- Filters:
+  - **Progress**: to do or done.
+  - **Difficulty**.
+  - **In season**: months; a route matches if any selected month is in its season.
+  - Country and search.
+  - **More filters**: days range (matches when the route's typical range overlaps), distance, elevation and terrain.
+- Likes, sorting and shareable URL filters work as on the other pages. Likes are stored as `hut-<id>`.
+- Data: `data/huts.json`, curated by hand. Figures vary between sources and route variants, so official figures are used where they exist. A blank cell means no reliable figure was found.
 
 ### Data and caching
 When the page loads, it shows the newest data it can find, in this order:
@@ -97,6 +112,8 @@ After you change `Code.gs`, publish a new version: **Deploy → Manage deploymen
 | `data/races.json` | Bundled fallback snapshot (UTMB) |
 | `europe.html` | Iconic Europe page (`<body data-page="europe">`; same `app.js`) |
 | `data/europe-races.json` | Curated non-UTMB European races |
+| `huts.html`, `huts.js` | Hut to Hut page and its logic |
+| `data/huts.json` | Curated hut-to-hut routes |
 | `apps-script/Code.gs` | Google Apps Script backend (shared cache and UTMB proxy) |
 
 ## Run locally
@@ -112,4 +129,5 @@ No build step and no dependencies.
 
 The repo includes project skills in `.claude/skills/`:
 - **update-races-snapshot**: regenerates `data/races.json` from the UTMB API (`scripts/update.sh`).
+- **manage-hut-routes**: adds, updates, removes and marks routes done in `data/huts.json`. It includes a validator (`scripts/validate.mjs`).
 - **manage-europe-races**: adds, updates, re-checks or removes races in `data/europe-races.json`. It covers the record format, how to roll a race over to its next edition, and a validator (`scripts/validate.mjs`) that checks the schema and flags past dates, stale data and overlap with UTMB events.

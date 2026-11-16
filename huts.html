@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hut to Hut Routes</title>
+  <meta name="description" content="Well-known multi-day hut-to-hut routes in Europe for fastpacking and trekking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="huts">
+  <nav class="nav">
+    <a href="./">UTMB World Series</a>
+    <a href="europe.html">Iconic Europe</a>
+    <a href="huts.html" aria-current="page">Hut to Hut</a>
+  </nav>
+  <header class="top">
+    <div>
+      <h1>Hut to Hut</h1>
+      <p class="meta" id="meta">Loading…</p>
+      <p class="meta">Well-known multi-day routes in Europe, sleeping in mountain huts and refuges. Figures vary by source and variant, so check the official site before you plan.</p>
+    </div>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="row">
+      <input id="q" type="search" placeholder="Search route, region or country…" autocomplete="off">
+      <select id="country" aria-label="Country"><option value="">All countries</option></select>
+      <button id="liked" class="btn like-filter" type="button" aria-pressed="false">♥ Liked <span class="n" id="liked-n"></span></button>
+      <button id="reset" class="btn" type="button">Reset</button>
+    </div>
+
+    <div class="group"><span class="label">Progress</span><div class="chips" id="f-progress"></div></div>
+    <div class="group"><span class="label">Difficulty</span><div class="chips" id="f-difficulty"></div></div>
+    <div class="group"><span class="label">In season</span><div class="chips" id="f-month"></div></div>
+
+    <details class="more">
+      <summary>More filters</summary>
+      <div class="ranges">
+        <label>Days <span class="pair"><input id="daysMin" type="number" min="1" placeholder="min"><input id="daysMax" type="number" min="1" placeholder="max"></span></label>
+        <label>Distance km <span class="pair"><input id="distMin" type="number" min="0" placeholder="min"><input id="distMax" type="number" min="0" placeholder="max"></span></label>
+        <label>Elevation m <span class="pair"><input id="elevMin" type="number" min="0" placeholder="min"><input id="elevMax" type="number" min="0" placeholder="max"></span></label>
+      </div>
+      <div class="group"><span class="label">Terrain</span><div class="chips" id="f-terrain"></div></div>
+    </details>
+  </section>
+
+  <main>
+    <p class="count" id="count"></p>
+    <div class="table-wrap">
+      <table id="table">
+        <thead>
+          <tr>
+            <th data-sort="liked" class="like" aria-label="Liked">♥</th>
+            <th data-sort="name">Route</th>
+            <th data-sort="countries">Where</th>
+            <th data-sort="days" class="num">Days</th>
+            <th data-sort="distance" class="num">Distance</th>
+            <th data-sort="elevationGain" class="num">D+</th>
+            <th data-sort="highestPoint" class="num">High point</th>
+            <th data-sort="seasonStart">Season</th>
+            <th data-sort="difficulty">Difficulty</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>No routes match these filters.</p>
+  </main>
+
+  <script src="huts.js"></script>
+</body>
+</html>

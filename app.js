@@ -302,6 +302,13 @@
   const fmtNum = (v, unit) => (v == null ? '' : `${Number(v).toLocaleString('en')} ${unit}`);
   const fmtDate = (d) => (d ? d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '—');
 
+  function mapLink(r) {
+    const label = [r.place, r.country].filter(Boolean).join(', ');
+    if (!r.place && r.country === 'Unknown') return esc(label);
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(label)}`;
+    return `<a class="map" href="${url}" target="_blank" rel="noopener" title="Open in Google Maps">${esc(label)}</a>`;
+  }
+
   function render() {
     const list = races.filter(matches).sort(compare);
 
@@ -316,7 +323,7 @@
           ${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.race || r.event)}</a>` : esc(r.race || r.event)}
           <div class="sub">${esc([r.race ? r.event : '', r.series].filter(Boolean).join(' · '))}</div>
         </td>
-        <td class="loc">${esc(r.place || r.country)}${r.place ? `, ${esc(r.country)}` : ''}<div class="sub">${esc(r.continent)}</div></td>
+        <td class="loc">${mapLink(r)}<div class="sub">${esc(r.continent)}</div></td>
         <td class="num">${fmtNum(r.distance, 'km')}</td>
         <td class="num">${fmtNum(r.elevationGain, 'm D+')}</td>
         <td class="cat">${esc(r.category.toUpperCase())}</td>

@@ -253,3 +253,29 @@ td.status .sub { margin-top: 3px; max-width: 180px; }
 [data-page=europe] .stones { display: none; }
 [data-page=europe] td.loc .sub { display: none; }
 td.date .sub { white-space: normal; max-width: 140px; }
+a.map { text-decoration: none; }
+a.map:hover { text-decoration: underline; }
+
+/* Hut to Hut page */
+.b-done { color: var(--lottery); background: var(--lottery-bg); margin-left: 6px; vertical-align: 1px; }
+.d-moderate { color: var(--open); background: var(--open-bg); }
+.d-challenging { color: var(--soon); background: var(--soon-bg); }
+.d-demanding { color: var(--sold); background: var(--sold-bg); }
+[data-page=huts] tr.route td { border-bottom: 0; padding-bottom: 4px; }
+[data-page=huts] tbody tr.route:hover, [data-page=huts] tbody tr.route:hover + tr.detail { background: var(--bg); }
+[data-page=huts] tbody tr.detail:hover { background: transparent; }
+tr.detail td { padding-top: 0; font-size: 12px; color: var(--muted); }
+tr.detail span { display: inline-block; margin: 0 16px 2px 0; }
+tr.detail b { font-weight: 500; color: var(--text); margin-right: 4px; }
+td.season { white-space: nowrap; }
+
+@media (max-width: 720px) {
+  [data-page=huts] tr.route { border-bottom: 0; padding-bottom: 0; }
+  [data-page=huts] td.days:not(:empty)::after { content: " days · "; }
+  [data-page=huts] td.high:not(:empty)::before { content: "↑ "; }
+  [data-page=huts] td.race { padding-right: 110px; }
+  tr.detail td:first-child { display: none; }
+  [data-page=huts] td.season::after { content: none; }
+  [data-page=huts] td.loc .sub { display: block; }
+  tr.detail { padding-top: 4px; }
+}
