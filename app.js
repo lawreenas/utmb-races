@@ -1,6 +1,9 @@
 (() => {
-  const API_URL = (window.UTMB_CONFIG && window.UTMB_CONFIG.API_URL) || '';
-  const SNAPSHOT_URL = 'data/races.json';
+  // <body data-page="utmb"> (default) or "europe": curated non-UTMB races, no UTMB refresh/cache.
+  const PAGE = document.body.dataset.page || 'utmb';
+  const IS_UTMB = PAGE === 'utmb';
+  const API_URL = (IS_UTMB && window.UTMB_CONFIG && window.UTMB_CONFIG.API_URL) || '';
+  const SNAPSHOT_URL = IS_UTMB ? 'data/races.json' : 'data/europe-races.json';
   const UTMB_URL = 'https://api.utmb.world/search/races?lang=en&limit=300';
   const LS_KEY = 'utmb-races:cache:v1';
   const LIKES_KEY = 'utmb-races:likes:v1';
@@ -8,11 +11,13 @@
   const STATUS = {
     registration_open: 'Open',
     available_soon: 'Opens soon',
+    lottery: 'Lottery',
     registration_sold_out: 'Sold out',
     registration_closed: 'Closed',
     unknown: 'Unknown',
   };
   const CATEGORY_ORDER = ['20k', '50k', '100k', '100m'];
+  const ENTRY = { 'first-come': 'First come', lottery: 'Lottery', qualification: 'Qualification', invitation: 'Invitation', mixed: 'Mixed' };
   const CONTINENT_ORDER = ['Europe', 'Asia', 'North America', 'South America', 'Africa', 'Oceania', 'Other'];
   const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august',
     'september', 'october', 'november', 'december'];
@@ -27,7 +32,7 @@
 
   function defaultFilters() {
     return {
-      q: '', country: '', status: [], continent: [], category: [], terrain: [],
+      q: '', country: '', status: [], continent: [], category: [], terrain: [], entry: [], series: [],
       dateFrom: '', dateTo: '', distMin: '', distMax: '', elevMin: '', elevMax: '', stonesMin: '',
       past: false, liked: false,
     };
@@ -54,8 +59,11 @@
     };
   }
 
-  // "13th November 2026" → Date (local midnight)
+  // "13th November 2026" or "2026-11-13" → Date (local midnight)
   function parseDate(s) {
+    if (!s) return null;
+    const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || '').trim());
+    if (iso) return new Date(Number(iso[1]), Number(iso[2]) - 1, Number(iso[3]));
     const m = /^(\d{1,2})\w*\s+([a-z]+)\s+(\d{4})$/i.exec(String(s || '').trim());
     if (m) {
       const month = MONTHS.indexOf(m[2].toLowerCase());
@@ -65,13 +73,24 @@
     return isNaN(d) ? null : d;
   }
 
+  // UTMB-style World Series category from distance, for races that don't have one.
+  function categoryFromDistance(km) {
+    if (km == null) return '';
+    if (km < 35) return '20k';
+    if (km < 75) return '50k';
+    if (km < 140) return '100k';
+    return '100m';
+  }
+
   function cleanLocation(loc) {
     return loc && loc !== 'undefined' && !String(loc).startsWith('undefined') ? String(loc) : '';
   }
 
   function normalize(list) {
     const out = list.map(slim).map((r) => {
-      const [event, ...rest] = String(r.name || '').split(' - ');
+      // Curated races carry event/race separately; UTMB races encode them as "Event - Race".
+      const [event, ...rest] = r.event ? [r.event, r.race || ''] : String(r.name || '').split(' - ');
+      r = { ...r, name: r.name || [event, ...rest].filter(Boolean).join(' - ') };
       const location = cleanLocation(r.startLocation) || EVENT_LOCATION_FALLBACK[event] || '';
       const parts = location.split(',').map((p) => p.trim()).filter(Boolean);
       return {
@@ -82,8 +101,10 @@
         country: parts.length ? parts[parts.length - 1] : '',
         place: parts.slice(0, -1).join(', '),
         status: r.status || 'unknown',
-        category: r.category ? String(r.category).toLowerCase() : '',
-        playgrounds: Array.isArray(r.playgrounds) ? r.playgrounds : [],
+        category: r.category ? String(r.category).toLowerCase() : categoryFromDistance(r.distance),
+        playgrounds: Array.isArray(r.playgrounds) ? r.playgrounds : (r.terrain || []),
+        series: r.series || '',
+        entry: r.entry || '',
       };
     });
 
@@ -97,12 +118,13 @@
       }
       r.country = r.country || 'Unknown';
       r.continent = continentOf(r.country);
-      r.search = [r.event, r.race, r.place, r.country, r.continent].join(' ').toLowerCase();
+      r.search = [r.event, r.race, r.place, r.country, r.continent, r.series].join(' ').toLowerCase();
     });
     return out;
   }
 
   function loadLocal() {
+    if (!IS_UTMB) return null;
     try {
       const v = JSON.parse(localStorage.getItem(LS_KEY));
       return v && Array.isArray(v.races) ? v : null;
@@ -110,6 +132,7 @@
   }
 
   function saveLocal(data) {
+    if (!IS_UTMB) return;
     try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch { /* storage unavailable */ }
   }
 
@@ -166,7 +189,7 @@
       saveLocal(best);
       setData(best, origin);
     } else if (!best) {
-      $('meta').textContent = 'No data yet — press Refresh.';
+      $('meta').textContent = IS_UTMB ? 'No data yet — press Refresh.' : 'Could not load the race list.';
     }
   }
 
@@ -207,6 +230,7 @@
   }, {});
 
   function buildChips(el, key, values, label = (v) => v) {
+    if (!el) return; // filter group not on this page
     const c = counts(key === 'terrain' ? 'playgrounds' : key);
     el.innerHTML = values.filter((v) => c[v]).map((v) => `
       <button type="button" class="chip" data-key="${key}" data-value="${esc(v)}"
@@ -221,6 +245,8 @@
     buildChips($('f-continent'), 'continent', uniq('continent').sort(by(CONTINENT_ORDER)));
     buildChips($('f-category'), 'category', uniq('category').sort(by(CATEGORY_ORDER)), (v) => v.toUpperCase());
     buildChips($('f-terrain'), 'terrain', uniq('playgrounds').sort(), humanize);
+    buildChips($('f-entry'), 'entry', uniq('entry').sort(by(Object.keys(ENTRY))), (v) => ENTRY[v] || v);
+    buildChips($('f-series'), 'series', uniq('series').sort());
     buildCountries();
   }
 
@@ -246,6 +272,8 @@
     if (f.continent.length && !f.continent.includes(r.continent)) return false;
     if (f.category.length && !f.category.includes(r.category)) return false;
     if (f.terrain.length && !f.terrain.some((t) => r.playgrounds.includes(t))) return false;
+    if (f.entry.length && !f.entry.includes(r.entry)) return false;
+    if (f.series.length && !f.series.includes(r.series)) return false;
     if (f.dateFrom && (!r.date || r.date < new Date(`${f.dateFrom}T00:00`))) return false;
     if (f.dateTo && (!r.date || r.date > new Date(`${f.dateTo}T00:00`))) return false;
     if (!inRange(r.distance, num(f.distMin), num(f.distMax))) return false;
@@ -283,17 +311,17 @@
       <tr>
         <td class="like"><button type="button" class="heart" data-id="${esc(r.id)}" aria-pressed="${liked}"
           aria-label="${liked ? 'Unlike' : 'Like'} ${esc(r.race || r.event)}">${liked ? '♥' : '♡'}</button></td>
-        <td class="date">${fmtDate(r.date)}</td>
+        <td class="date">${r.date ? fmtDate(r.date) : 'TBA'}${r.dateNote ? `<div class="sub">${esc(r.dateNote)}</div>` : ''}</td>
         <td class="race">
           ${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.race || r.event)}</a>` : esc(r.race || r.event)}
-          <div class="sub">${esc(r.event)}</div>
+          <div class="sub">${esc([r.race ? r.event : '', r.series].filter(Boolean).join(' · '))}</div>
         </td>
         <td class="loc">${esc(r.place || r.country)}${r.place ? `, ${esc(r.country)}` : ''}<div class="sub">${esc(r.continent)}</div></td>
         <td class="num">${fmtNum(r.distance, 'km')}</td>
         <td class="num">${fmtNum(r.elevationGain, 'm D+')}</td>
         <td class="cat">${esc(r.category.toUpperCase())}</td>
         <td class="num stones">${r.runningStones ?? ''}</td>
-        <td class="status"><span class="badge s-${esc(r.status)}">${esc(STATUS[r.status] || r.status)}</span></td>
+        <td class="status"><span class="badge s-${esc(r.status)}">${esc(STATUS[r.status] || r.status)}</span>${r.statusNote ? `<div class="sub">${esc(r.statusNote)}</div>` : ''}</td>
       </tr>`;
     }).join('');
 
@@ -313,9 +341,13 @@
     });
 
     if (dataInfo) {
-      const when = dataInfo.updatedAt ? new Date(dataInfo.updatedAt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown time';
-      const src = { shared: 'shared cache', local: 'this browser', snapshot: 'bundled snapshot' }[dataInfo.origin];
-      $('meta').textContent = `Data from ${when} · ${src}`;
+      const when = !dataInfo.updatedAt ? 'unknown time'
+        : IS_UTMB ? new Date(dataInfo.updatedAt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })
+        : fmtDate(parseDate(String(dataInfo.updatedAt).slice(0, 10)));
+      const src = IS_UTMB
+        ? { shared: 'shared cache', local: 'this browser', snapshot: 'bundled snapshot' }[dataInfo.origin]
+        : 'curated list';
+      $('meta').textContent = IS_UTMB ? `Data from ${when} · ${src}` : `Last checked ${when} · ${src}`;
     }
     writeURL();
   }
@@ -331,7 +363,7 @@
 
   // ---------- URL state (filters are shareable links) ----------
 
-  const LIST_KEYS = ['status', 'continent', 'category', 'terrain'];
+  const LIST_KEYS = ['status', 'continent', 'category', 'terrain', 'entry', 'series'];
   const TEXT_KEYS = ['q', 'country', 'dateFrom', 'dateTo', 'distMin', 'distMax', 'elevMin', 'elevMax', 'stonesMin'];
 
   function readURL() {
@@ -358,15 +390,15 @@
   }
 
   function syncInputs() {
-    TEXT_KEYS.forEach((k) => { $(k).value = filters[k]; });
+    TEXT_KEYS.forEach((k) => { if ($(k)) $(k).value = filters[k]; });
     $('past').checked = filters.past;
   }
 
   function bindUI() {
     syncInputs();
-    $('refresh').addEventListener('click', refresh);
+    if ($('refresh')) $('refresh').addEventListener('click', refresh);
 
-    TEXT_KEYS.forEach((k) => $(k).addEventListener('input', (e) => { filters[k] = e.target.value.trim(); render(); }));
+    TEXT_KEYS.forEach((k) => $(k) && $(k).addEventListener('input', (e) => { filters[k] = e.target.value.trim(); render(); }));
     $('past').addEventListener('change', (e) => { filters.past = e.target.checked; render(); });
     $('liked').addEventListener('click', () => { filters.liked = !filters.liked; render(); });
 

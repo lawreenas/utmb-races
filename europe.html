@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iconic Europe Races</title>
+  <meta name="description" content="Iconic European trail races outside the UTMB World Series, with dates and registration status.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="europe">
+  <nav class="nav">
+    <a href="./">UTMB World Series</a>
+    <a href="europe.html" aria-current="page">Iconic Europe</a>
+  </nav>
+  <header class="top">
+    <div>
+      <h1>Iconic Europe</h1>
+      <p class="meta" id="meta">Loading…</p>
+      <p class="meta">Classic European trail races outside the UTMB World Series. Curated by hand — check the official site before you plan.</p>
+    </div>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="row">
+      <input id="q" type="search" placeholder="Search race, event or location…" autocomplete="off">
+      <select id="country" aria-label="Country"><option value="">All countries</option></select>
+      <button id="liked" class="btn like-filter" type="button" aria-pressed="false">♥ Liked <span class="n" id="liked-n"></span></button>
+      <button id="reset" class="btn" type="button">Reset</button>
+    </div>
+
+    <div class="group"><span class="label">Availability</span><div class="chips" id="f-status"></div></div>
+    <div class="group"><span class="label">Entry</span><div class="chips" id="f-entry"></div></div>
+    <div class="group"><span class="label">Category</span><div class="chips" id="f-category"></div></div>
+    <div class="group"><span class="label">Series</span><div class="chips" id="f-series"></div></div>
+
+    <details class="more">
+      <summary>More filters</summary>
+      <div class="ranges">
+        <label>From <input id="dateFrom" type="date"></label>
+        <label>To <input id="dateTo" type="date"></label>
+        <label>Distance km <span class="pair"><input id="distMin" type="number" min="0" placeholder="min"><input id="distMax" type="number" min="0" placeholder="max"></span></label>
+        <label>Elevation m <span class="pair"><input id="elevMin" type="number" min="0" placeholder="min"><input id="elevMax" type="number" min="0" placeholder="max"></span></label>
+        <label class="check"><input id="past" type="checkbox"> Include past races</label>
+      </div>
+      <div class="group"><span class="label">Terrain</span><div class="chips" id="f-terrain"></div></div>
+    </details>
+  </section>
+
+  <main>
+    <p class="count" id="count"></p>
+    <div class="table-wrap">
+      <table id="table">
+        <thead>
+          <tr>
+            <th data-sort="liked" class="like" aria-label="Liked">♥</th>
+            <th data-sort="date">Date</th>
+            <th data-sort="event">Race</th>
+            <th data-sort="country">Location</th>
+            <th data-sort="distance" class="num">Distance</th>
+            <th data-sort="elevationGain" class="num">D+</th>
+            <th data-sort="category">Category</th>
+            <th data-sort="runningStones" class="num stones">Stones</th>
+            <th data-sort="status">Availability</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>No races match these filters.</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="geo.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

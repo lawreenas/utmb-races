@@ -17,6 +17,8 @@
   --closed: #57534e;
   --closed-bg: #f5f5f4;
   --like: #e11d48;
+  --lottery: #6d28d9;
+  --lottery-bg: #ede9fe;
   --radius: 8px;
 }
 
@@ -40,6 +42,8 @@
     --closed: #a8a29e;
     --closed-bg: #29252480;
     --like: #fb7185;
+    --lottery: #c4b5fd;
+    --lottery-bg: #4c1d9555;
   }
 }
 
@@ -226,6 +230,8 @@ th.like, td.like { width: 1%; padding-right: 0; text-align: center; }
   td { border: 0; padding: 0; }
   td.race { padding-right: 100px; margin-bottom: 4px; }
   td.status { position: absolute; top: 12px; right: 12px; }
+  td.status { text-align: right; }
+  td.status .sub { max-width: 96px; margin-left: auto; }
   td.like { position: absolute; bottom: 8px; right: 8px; width: auto; padding: 0; }
   td.num, td.cat { display: inline; text-align: left; color: var(--muted); font-size: 12px; }
   td.num:not(.stones):not(:empty)::after, td.cat:not(:empty)::after { content: " · "; }
@@ -234,3 +240,16 @@ th.like, td.like { width: 1%; padding-right: 0; text-align: center; }
   td.loc { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
   td.loc .sub { display: none; }
 }
+
+/* Page nav */
+.nav { display: flex; gap: 16px; margin-bottom: 14px; font-size: 13px; }
+.nav a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+.nav a:hover { color: var(--text); }
+.nav a[aria-current=page] { color: var(--text); border-bottom-color: var(--text); }
+
+/* Curated Europe page */
+.s-lottery { color: var(--lottery); background: var(--lottery-bg); }
+td.status .sub { margin-top: 3px; max-width: 180px; }
+[data-page=europe] .stones { display: none; }
+[data-page=europe] td.loc .sub { display: none; }
+td.date .sub { white-space: normal; max-width: 140px; }

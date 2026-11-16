@@ -1,8 +1,8 @@
 # UTMB Races
 
-A minimal static web app (GitHub Pages) that lists upcoming **UTMB World Series** races and their registration availability.
+A minimal static web app (GitHub Pages) that lists upcoming **UTMB World Series** races and their registration availability. A second page, **Iconic Europe**, lists famous European trail races that aren't part of the UTMB World Series.
 
-Live: https://lawreenas.github.io/utmb-races/
+Live: https://lawreenas.github.io/utmb-races/ · [Iconic Europe](https://lawreenas.github.io/utmb-races/europe.html)
 
 ## Features
 
@@ -41,6 +41,15 @@ All filters combine (AND). Within one chip group, the selected values combine as
 
 ### Continents
 The country is the last part of UTMB's `startLocation` (for example `"Mui Wo, Hong Kong, China"` → China). `geo.js` maps each country to a continent. Transcontinental countries go by where the races are held (for example Türkiye → Asia). If UTMB returns no location for a race, the app uses the location of another race in the same event, or a manual entry in `EVENT_LOCATION_FALLBACK` in `geo.js`. Countries that aren't in the map appear as **Other**. To fix one, add it to `geo.js`.
+
+### Iconic Europe page (`europe.html`)
+A hand-curated list of classic European races outside the UTMB World Series, for example Tor des Géants, Sierre-Zinal, Zegama, Marathon du Mont-Blanc, Lakeland 100, the Spine Race, Dragon's Back and MIUT.
+- It has the same table, likes, search, sorting and URL-shareable filters as the UTMB page.
+- **Availability** adds a **Lottery** badge. Each badge has a short note underneath with the key dates, such as when a lottery opens or when a race sold out.
+- If a date isn't announced yet, the race shows **TBA** with a note (e.g. "Expected late Aug 2027"). These races are always listed.
+- Extra filters: **Entry** (first come, lottery, qualification, mixed) and **Series** (Golden Trail World Series, Skyrunner World Series, World Trail Majors, …).
+- **Category** (20K/50K/100K/100M) is derived from distance (<35, <75, <140, ≥140 km). Running Stones and continent don't apply, so they're hidden.
+- Data: `data/europe-races.json`, researched by hand from official race sites. The header shows the "Last checked" date. There's no live API and no Refresh button. Statuses change around opening and lottery dates, so always check the official site (each race name links to it).
 
 ### Data and caching
 When the page loads, it shows the newest data it can find, in this order:
@@ -85,7 +94,9 @@ After you change `Code.gs`, publish a new version: **Deploy → Manage deploymen
 | `app.js` | Data loading, caching, normalization, filters, sorting, rendering |
 | `geo.js` | Country → continent map and location fallbacks |
 | `config.js` | Shared cache URL |
-| `data/races.json` | Bundled fallback snapshot |
+| `data/races.json` | Bundled fallback snapshot (UTMB) |
+| `europe.html` | Iconic Europe page (`<body data-page="europe">`; same `app.js`) |
+| `data/europe-races.json` | Curated non-UTMB European races |
 | `apps-script/Code.gs` | Google Apps Script backend (shared cache and UTMB proxy) |
 
 ## Run locally
@@ -96,3 +107,9 @@ python3 -m http.server 8000
 ```
 
 No build step and no dependencies.
+
+## Claude Code skills
+
+The repo includes project skills in `.claude/skills/`:
+- **update-races-snapshot**: regenerates `data/races.json` from the UTMB API (`scripts/update.sh`).
+- **manage-europe-races**: adds, updates, re-checks or removes races in `data/europe-races.json`. It covers the record format, how to roll a race over to its next edition, and a validator (`scripts/validate.mjs`) that checks the schema and flags past dates, stale data and overlap with UTMB events.

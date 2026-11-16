@@ -1,0 +1,639 @@
+{
+  "updatedAt": "2026-11-16",
+  "source": "curated",
+  "races": [
+    {
+      "id": "montane-winter-spine-race",
+      "event": "Montane Winter Spine Race",
+      "race": "The Spine (268 mi, Pennine Way)",
+      "startDate": "2027-01-10",
+      "dateNote": null,
+      "startLocation": "Edale, United Kingdom",
+      "distance": 431,
+      "elevationGain": 10732,
+      "status": "registration_sold_out",
+      "statusNote": "Roster above the 150 places; waitlist",
+      "entry": "qualification",
+      "series": null,
+      "link": "https://www.thespinerace.com/race/montane-winter-spine/montane-winter-spine-spine/",
+      "terrain": [
+        "hill",
+        "hikingTrail",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.thespinerace.com/race/montane-winter-spine/montane-winter-spine-spine/",
+        "https://www.thespinerace.com/roster/montane-winter-spine-spine"
+      ]
+    },
+    {
+      "id": "transgrancanaria-classic",
+      "event": "Transgrancanaria",
+      "race": "Classic",
+      "startDate": "2027-02-26",
+      "dateNote": null,
+      "startLocation": "Las Palmas de Gran Canaria, Spain",
+      "distance": 126,
+      "elevationGain": 6800,
+      "status": "registration_sold_out",
+      "statusNote": "Sold out 20 Oct 2026",
+      "entry": "first-come",
+      "series": "World Trail Majors",
+      "link": "https://transgrancanaria.net/en/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "beach",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://8sports.es/trail/2026/10/21/the-north-face-transgrancanaria-agota-los-dorsales-de-la-classic-y-el-kilometro-vertical-el-gigante/",
+        "https://transgrancanaria.net/en/the-north-face-transgrancanaria-2027-opens-registrations-on-1-july/"
+      ]
+    },
+    {
+      "id": "miut-legend",
+      "event": "MIUT – Madeira Island Ultra-Trail",
+      "race": "MIUT Legend",
+      "startDate": "2027-04-24",
+      "dateNote": null,
+      "startLocation": "Porto Moniz, Madeira, Portugal",
+      "distance": 110,
+      "elevationGain": 7200,
+      "status": "registration_sold_out",
+      "statusNote": "800 spots sold out on day 1; lottery drawn 14 Nov 2026",
+      "entry": "mixed",
+      "series": "World Trail Majors",
+      "link": "https://miutmadeira.com/miut-legend-ultra-trail-madeira/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "coastalPath",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://miutmadeira.com/miut-legend-ultra-trail-madeira/",
+        "https://www.dnoticias.pt/2026/10/13/508881-miut2027-esgota-800-vagas-no-primeiro-dia-e-surpreende-organizacao/"
+      ]
+    },
+    {
+      "id": "transvulcania-ultramarathon",
+      "event": "Transvulcania",
+      "race": "Ultramarathon",
+      "startDate": "2027-05-08",
+      "dateNote": null,
+      "startLocation": "Fuencaliente, La Palma, Spain",
+      "distance": 73,
+      "elevationGain": 4350,
+      "status": "registration_sold_out",
+      "statusNote": "Sold out; waiting list available",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://transvulcania.com/en/modalities/transvulcania-ultramarathon/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "coastalPath",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://transvulcania.com/en/modalities/transvulcania-ultramarathon/",
+        "https://www.avaibooksports.com/inscripcion/transvulcania-2027/"
+      ]
+    },
+    {
+      "id": "zegama-aizkorri-marathon",
+      "event": "Zegama-Aizkorri",
+      "race": "Marathon",
+      "startDate": "2027-06-06",
+      "dateNote": null,
+      "startLocation": "Zegama, Spain",
+      "distance": 42.195,
+      "elevationGain": 2736,
+      "status": "lottery",
+      "statusNote": "Pre-registration 11–22 Jan 2027; draw 12 Feb",
+      "entry": "lottery",
+      "series": "Golden Trail World Series",
+      "link": "https://www.zegama-aizkorri.com/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.zegama-aizkorri.com/",
+        "https://carrerasdemontana.com/2026/10/09/zegama-aizkorri-2027-mayayo/"
+      ]
+    },
+    {
+      "id": "marathon-du-mont-blanc-42k",
+      "event": "Marathon du Mont-Blanc",
+      "race": "42K du Mont-Blanc",
+      "startDate": "2027-06-27",
+      "dateNote": null,
+      "startLocation": "Chamonix, France",
+      "distance": 42,
+      "elevationGain": 2540,
+      "status": "lottery",
+      "statusNote": "Lottery 23–30 Nov 2026, results 7 Dec; some first-come bibs from 18–20 Nov",
+      "entry": "mixed",
+      "series": null,
+      "link": "https://www.marathonmontblanc.fr/en/races/42km-du-mont-blanc",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.marathonmontblanc.fr/en/runners/registration",
+        "https://www.marathonmontblanc.fr/en/races/42km-du-mont-blanc"
+      ]
+    },
+    {
+      "id": "dolomyths-run-skyrace",
+      "event": "DoloMyths Run",
+      "race": "SkyRace",
+      "startDate": "2027-07-11",
+      "dateNote": null,
+      "startLocation": "Canazei, Italy",
+      "distance": 22,
+      "elevationGain": 1750,
+      "status": "unknown",
+      "statusNote": "2027 opening not stated; max 800 runners",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://dolomythsrun.it/en/sky.html",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://dolomythsrun.it/en/home.html",
+        "https://dolomythsrun.it/en/sky.html"
+      ]
+    },
+    {
+      "id": "grossglockner-ultra-trail-110",
+      "event": "Grossglockner Ultra-Trail",
+      "race": "GGUT 110",
+      "startDate": "2027-07-23",
+      "dateNote": null,
+      "startLocation": "Kaprun, Austria",
+      "distance": 110,
+      "elevationGain": 6500,
+      "status": "registration_open",
+      "statusNote": "Needs ≥3 ITRA points qualifier; from €209",
+      "entry": "qualification",
+      "series": null,
+      "link": "https://www.ultratrail.at/en/distances/grossglockner-ultra-trail",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "glacier",
+        "singleTrack",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.ultratrail.at/en/distances/grossglockner-ultra-trail",
+        "https://registration.datasport.com/en/the-north-face-grossglockner-ultra-trail-2027"
+      ]
+    },
+    {
+      "id": "lakeland-100",
+      "event": "Lakeland 100",
+      "race": "100 miles",
+      "startDate": "2027-07-23",
+      "dateNote": "Starts Fri 18:00; 105-mile course",
+      "startLocation": "Coniston, United Kingdom",
+      "distance": 169,
+      "elevationGain": 6300,
+      "status": "registration_closed",
+      "statusNote": "Ballot ran 1–3 Sep 2026; 2027 full, no waiting list",
+      "entry": "mixed",
+      "series": null,
+      "link": "https://lakeland100.com/enter-the-event/",
+      "terrain": [
+        "hill",
+        "mountain",
+        "hikingTrail",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://lakeland100.com/enter-the-event/",
+        "https://lakeland100.com/thelakeland50100/"
+      ]
+    },
+    {
+      "id": "skyrace-comapedrosa",
+      "event": "Comapedrosa Mountain Festival",
+      "race": "Skyrace Comapedrosa 24K",
+      "startDate": "2027-07-25",
+      "dateNote": "Date per XTERRA listing; not yet on organiser site",
+      "startLocation": "Arinsal, Andorra",
+      "distance": 24,
+      "elevationGain": 2375,
+      "status": "unknown",
+      "statusNote": "2027 entries not open yet; date TBA",
+      "entry": null,
+      "series": "XTERRA Trail Run World Series",
+      "link": "https://skyracecomapedrosa.com/en/festival-eng",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://xterraplanet.com/event/xterra-skyrace-comapedrosa",
+        "https://skyracecomapedrosa.com/en/festival-eng"
+      ]
+    },
+    {
+      "id": "sierre-zinal",
+      "event": "Sierre-Zinal",
+      "race": "",
+      "startDate": "2027-08-07",
+      "dateNote": null,
+      "startLocation": "Sierre, Switzerland",
+      "distance": 31,
+      "elevationGain": 2200,
+      "status": "lottery",
+      "statusNote": "Entry window 2 Apr 2027 (12:00–18:00), draw if oversubscribed",
+      "entry": "lottery",
+      "series": "Golden Trail World Series",
+      "link": "https://www.sierre-zinal.com/en/sierre-zinal-race-date-route-341.html",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.sierre-zinal.com/en/faq-410.html",
+        "https://www.sierre-zinal.com/en/inscription-411.html"
+      ]
+    },
+    {
+      "id": "dragons-back-race",
+      "event": "Dragon's Back Race",
+      "race": "The Dragon (6 days)",
+      "startDate": "2027-09-06",
+      "dateNote": "6–11 Sep 2027, Conwy → Cardiff",
+      "startLocation": "Conwy, United Kingdom",
+      "distance": 380,
+      "elevationGain": 16400,
+      "status": "registration_open",
+      "statusNote": "Limited places; £2,095",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.dragonsbackrace.com/enter-1",
+      "terrain": [
+        "mountain",
+        "hill",
+        "singleTrack",
+        "hikingTrail",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.dragonsbackrace.com/home",
+        "https://www.dragonsbackrace.com/enter-1"
+      ]
+    },
+    {
+      "id": "tor-des-glaciers-450",
+      "event": "Tor des Glaciers",
+      "race": "TOR450",
+      "startDate": "2027-09-10",
+      "dateNote": "Date per Finishers",
+      "startLocation": "Courmayeur, Italy",
+      "distance": 450,
+      "elevationGain": 32000,
+      "status": "unknown",
+      "statusNote": "2027 entry not published; requires a TOR330 finish under 130 h",
+      "entry": "qualification",
+      "series": null,
+      "link": "https://torxtrail.com/tor450-tor-des-glaciers/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.finishers.com/en/event/tor-des-geants"
+      ]
+    },
+    {
+      "id": "jungfrau-marathon",
+      "event": "Jungfrau-Marathon",
+      "race": "",
+      "startDate": "2027-09-11",
+      "dateNote": null,
+      "startLocation": "Interlaken, Switzerland",
+      "distance": 42.195,
+      "elevationGain": 1953,
+      "status": "available_soon",
+      "statusNote": "Opens 14 Feb 2027, 08:00",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.jungfrau-marathon.ch/en/",
+      "terrain": [
+        "mountain",
+        "road",
+        "hikingTrail",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.jungfrau-marathon.ch/en/",
+        "https://www.jungfrau-marathon.ch/en/Course.html"
+      ]
+    },
+    {
+      "id": "tor-des-geants-330",
+      "event": "Tor des Géants",
+      "race": "TOR330",
+      "startDate": "2027-09-12",
+      "dateNote": "Date per Finishers / u-Trail",
+      "startLocation": "Courmayeur, Italy",
+      "distance": 330,
+      "elevationGain": 24000,
+      "status": "lottery",
+      "statusNote": "Draw usually 1–14 Feb; 2027 window not yet published",
+      "entry": "mixed",
+      "series": null,
+      "link": "https://torxtrail.com/tor330-tor-des-geants/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.finishers.com/en/event/tor-des-geants",
+        "https://www2.u-trail.com/?p=572386"
+      ]
+    },
+    {
+      "id": "transalpine-run",
+      "event": "Transalpine Run",
+      "race": "7-stage race",
+      "startDate": "2027-09-18",
+      "dateNote": "18–24 Sep 2027; route and stage figures TBA",
+      "startLocation": "Lenzerheide, Switzerland",
+      "distance": 250,
+      "elevationGain": 15000,
+      "status": "available_soon",
+      "statusNote": "Opening date TBA (2026 opened 2 Dec)",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.transalpine-run.com/en/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.transalpine-run.com/en/",
+        "https://www.finishers.com/en/event/transalpine-run"
+      ]
+    },
+    {
+      "id": "ultra-pirineu-100k",
+      "event": "Ultra Pirineu",
+      "race": "Ultra 100K",
+      "startDate": "2027-10-02",
+      "dateNote": null,
+      "startLocation": "Bagà, Spain",
+      "distance": 100,
+      "elevationGain": 6600,
+      "status": "unknown",
+      "statusNote": "Ex-finisher entry sold out; general opening TBA (2026: 9 Dec)",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://ultrapirineu.com/en/races/ultra/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://ultrapirineu.com/en/faq/",
+        "https://werun.world/course/salomon-ultra-pirineu/"
+      ]
+    },
+    {
+      "id": "templiers-grand-trail",
+      "event": "Festival des Templiers",
+      "race": "Grand Trail des Templiers",
+      "startDate": "2027-10-24",
+      "dateNote": "Festival 21–24 Oct 2027; Sunday race date inferred",
+      "startLocation": "Millau, France",
+      "distance": 80,
+      "elevationGain": 3497,
+      "status": "unknown",
+      "statusNote": "2027 opening TBA (2026 opened 19 Jan, first-come)",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.festivaldestempliers.com/",
+      "terrain": [
+        "hill",
+        "singleTrack",
+        "woods",
+        "hikingTrail",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.festivaldestempliers.com/",
+        "https://www.festivaldestempliers.com/infos-pratiques/"
+      ]
+    },
+    {
+      "id": "swiss-peaks-380",
+      "event": "SwissPeaks Trail",
+      "race": "SP 380 Legend",
+      "startDate": null,
+      "dateNote": "Expected late Aug 2027",
+      "startLocation": "Oberwald, Switzerland",
+      "distance": 397,
+      "elevationGain": 27530,
+      "status": "unknown",
+      "statusNote": "2027 registration not announced",
+      "entry": null,
+      "series": null,
+      "link": "https://www.swisspeaks.ch/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.finishers.com/en/event/swisspeaks-trail",
+        "https://www.runthealps.com/races/swiss-peaks-trail/"
+      ]
+    },
+    {
+      "id": "matterhorn-ultraks-49k",
+      "event": "Matterhorn Ultraks",
+      "race": "Sky 49K",
+      "startDate": null,
+      "dateNote": "Likely 21 Aug 2027 (tourism listings; not official)",
+      "startLocation": "Zermatt, Switzerland",
+      "distance": 49,
+      "elevationGain": 3600,
+      "status": "unknown",
+      "statusNote": "2027 registration not announced; 2026 sold out",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.matterhorn-ultraks.ch/home",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.matterhorn-ultraks.ch/home",
+        "https://www.myswitzerland.com/en/experiences/events/trek-matterhorn-ultraks/"
+      ]
+    },
+    {
+      "id": "trofeo-kima",
+      "event": "Trofeo Kima",
+      "race": "Sentiero Roma",
+      "startDate": null,
+      "dateNote": "Biennial; next edition expected Aug 2028",
+      "startLocation": "Filorera, Italy",
+      "distance": 52,
+      "elevationGain": 4200,
+      "status": "unknown",
+      "statusNote": "Selection-based entry; 2028 details not announced",
+      "entry": "qualification",
+      "series": "Skyrunner World Series",
+      "link": "https://www.trofeokima.org/?lang=en",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.trofeokima.org/?lang=en",
+        "https://www.trofeokima.org/rules/?lang=en"
+      ]
+    },
+    {
+      "id": "echappee-belle-integrale",
+      "event": "L'Échappée Belle",
+      "race": "L'Intégrale",
+      "startDate": null,
+      "dateNote": "Expected late Aug 2027",
+      "startLocation": "Vizille, France",
+      "distance": 150,
+      "elevationGain": 11200,
+      "status": "unknown",
+      "statusNote": "2027 opening TBA (2026 opened 13 Jan, first-come)",
+      "entry": "first-come",
+      "series": null,
+      "link": "https://www.lechappeebelledonne.com/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.lechappeebelledonne.com/",
+        "https://www.trails-de-france.fr/trail/echappee-belle/"
+      ]
+    },
+    {
+      "id": "grand-raid-pyrenees-ultra",
+      "event": "Grand Raid des Pyrénées",
+      "race": "Ultra Tour 160",
+      "startDate": null,
+      "dateNote": "20th edition; expected late Aug 2027",
+      "startLocation": "Vielle-Aure, France",
+      "distance": 160,
+      "elevationGain": 10000,
+      "status": "unknown",
+      "statusNote": "2027 pre-registration TBA (usually mid-Jan, then a draw)",
+      "entry": "lottery",
+      "series": null,
+      "link": "https://www.grandraidpyrenees.com/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "nightTime",
+        "dayTime"
+      ],
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.grandraidpyrenees.com/",
+        "https://running.life/fr/evenement/grand-raid-des-pyrenees"
+      ]
+    }
+  ]
+}
