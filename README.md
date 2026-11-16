@@ -57,8 +57,10 @@ Well-known multi-day routes in Europe where you sleep in huts, refuges or villag
 - Columns: route (links to the official or tourism page), region, countries, start → end (both link to Google Maps), typical days, distance, D+, high point (hover for its name), season and difficulty (Moderate / Challenging / Demanding).
 - Each route has a detail line with where you sleep, season notes, booking advice and route notes.
 - Routes you've completed carry a **Done** badge, set by `done: true` in the data.
+- **Length** category, derived from the minimum typical days: **Short** (≤4 days, with a badge), **Week** (5–9) or **Long** (10+). Filter by it to find weekend-plus trips such as Coronallacs, Cavalls del Vent, Giro del Monviso or Tour du Vignemale.
 - Filters:
   - **Progress**: to do or done.
+  - **Length**: short, week or long.
   - **Difficulty**.
   - **In season**: months; a route matches if any selected month is in its season.
   - Country and search.

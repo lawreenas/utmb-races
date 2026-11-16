@@ -8,7 +8,7 @@ description: Add, update, remove or mark as done multi-day hut-to-hut routes in 
 `huts.html` (rendered by `huts.js`) lists well-known multi-day routes in Europe where you sleep in mountain huts or refuges. The data lives in `data/huts.json` and is maintained by hand. Routes don't have editions, so the facts are fairly stable. What changes is **booking practice** and **hut opening seasons**, and the user's **done** list.
 
 ## What belongs on the list
-- Established, named multi-day routes (usually 4+ days) with huts, refuges or village guesthouses along the way. The routes the user has done are a good guide to the style: Alta Via 2, Peaks of the Balkans, GR221, GR11.
+- Established, named multi-day routes (2+ days; short 3–4 day loops are welcome) with huts, refuges or village guesthouses along the way. The routes the user has done are a good guide to the style: Alta Via 2, Peaks of the Balkans, GR221, GR11.
 - Europe only. Countries must exist in `geo.js`; add a new one there under the right continent.
 - One entry per route. Mention common variants in `difficultyNote` or `booking` instead of adding duplicates.
 
@@ -47,7 +47,7 @@ description: Add, update, remove or mark as done multi-day hut-to-hut routes in 
 | `countries` | Ordered along the route, so the first is the start country and the last the end country. These feed the map links. |
 | `start`, `end` | Place names. For a loop, set `end` to the same value as `start`; it shows as "(loop)". |
 | `distance`, `elevationGain`, `highestPoint` | km, total m of ascent and m. Use the official figures; `null` if unknown. Put the pass or peak in `highestPointName`. |
-| `days` | `[min, max]` typical stages. |
+| `days` | `[min, max]` typical stages for hikers. This also sets the **Length** category (computed in `huts.js` → `lengthOf`): **Short** when min ≤ 4, **Week** when min is 5–9, **Long** when min is 10+. Short routes get a badge. Don't store the category. |
 | `season` | The months the huts are open or the route is in condition, as an array of 1–12 in order. Wrap-around such as `[11, 12, 1]` is fine. |
 | `difficulty` | One of `moderate`, `challenging`, `demanding`. Explain why in `difficultyNote` (exposure, via ferrata, navigation, snow). |
 | `done` | `true` for routes the user has completed. Only change it when the user says so. |

@@ -4,6 +4,7 @@
 
   const DIFFICULTY = { moderate: 'Moderate', challenging: 'Challenging', demanding: 'Demanding' };
   const PROGRESS = { todo: 'To do', done: 'Done' };
+  const LENGTH = { short: 'Short (≤4 days)', week: 'Week (5–9)', long: 'Long (10+)' };
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const $ = (id) => document.getElementById(id);
@@ -16,7 +17,7 @@
 
   function defaultFilters() {
     return {
-      q: '', country: '', progress: [], difficulty: [], month: [], terrain: [],
+      q: '', country: '', progress: [], length: [], difficulty: [], month: [], terrain: [],
       daysMin: '', daysMax: '', distMin: '', distMax: '', elevMin: '', elevMax: '', liked: false,
     };
   }
@@ -32,11 +33,20 @@
     try { localStorage.setItem(LIKES_KEY, JSON.stringify([...likes])); } catch { /* storage unavailable */ }
   }
 
+  // Length category from the shortest typical itinerary.
+  function lengthOf(days) {
+    if (!days) return null;
+    if (days[0] <= 4) return 'short';
+    if (days[0] <= 9) return 'week';
+    return 'long';
+  }
+
   function normalize(list) {
     return list.map((r) => ({
       ...r,
       likeId: `hut-${r.id}`,
       progress: r.done ? 'done' : 'todo',
+      length: lengthOf(r.days),
       season: r.season || [],
       seasonStart: (r.season || [])[0] ?? null,
       daysRange: r.days || null,
@@ -77,6 +87,7 @@
 
   function buildFilterOptions() {
     buildChips($('f-progress'), 'progress', Object.keys(PROGRESS), (v) => PROGRESS[v]);
+    buildChips($('f-length'), 'length', Object.keys(LENGTH), (v) => LENGTH[v]);
     buildChips($('f-difficulty'), 'difficulty', Object.keys(DIFFICULTY), (v) => DIFFICULTY[v]);
     buildChips($('f-month'), 'month', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], (m) => MONTHS[m - 1], 'season');
     buildChips($('f-terrain'), 'terrain', [...new Set(routes.flatMap((r) => r.terrain))].sort(), humanize);
@@ -96,6 +107,7 @@
     if (f.q && !f.q.toLowerCase().split(/\s+/).every((w) => r.search.includes(w))) return false;
     if (f.country && !(r.countries || []).includes(f.country)) return false;
     if (f.progress.length && !f.progress.includes(r.progress)) return false;
+    if (f.length.length && !f.length.includes(r.length)) return false;
     if (f.difficulty.length && !f.difficulty.includes(r.difficulty)) return false;
     if (f.month.length && !f.month.some((m) => r.season.includes(Number(m)))) return false;
     if (f.terrain.length && !f.terrain.some((t) => r.terrain.includes(t))) return false;
@@ -156,6 +168,7 @@
           aria-label="${liked ? 'Unlike' : 'Like'} ${esc(r.name)}">${liked ? '♥' : '♡'}</button></td>
         <td class="race">
           ${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.name)}</a>` : esc(r.name)}
+          ${r.length === 'short' ? '<span class="badge b-short">Short</span>' : ''}
           ${r.done ? '<span class="badge b-done">Done</span>' : ''}
           <div class="sub">${esc(r.region)}</div>
         </td>
@@ -204,7 +217,7 @@
 
   // ---------- URL state ----------
 
-  const LIST_KEYS = ['progress', 'difficulty', 'month', 'terrain'];
+  const LIST_KEYS = ['progress', 'length', 'difficulty', 'month', 'terrain'];
   const TEXT_KEYS = ['q', 'country', 'daysMin', 'daysMax', 'distMin', 'distMax', 'elevMin', 'elevMax'];
 
   function readURL() {

@@ -210,6 +210,48 @@
       ]
     },
     {
+      "id": "brenta-dolomites-traverse",
+      "name": "Brenta Dolomites hut traverse",
+      "region": "Brenta Dolomites, Trentino",
+      "countries": [
+        "Italy"
+      ],
+      "start": "Madonna di Campiglio",
+      "end": "Molveno",
+      "distance": 52,
+      "elevationGain": 3160,
+      "highestPoint": 2580,
+      "highestPointName": "Rifugio Alimonta",
+      "days": [
+        3,
+        5
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Rifugi open about mid-Jun to late Sep",
+      "accommodation": "Mountain rifugi (SAT/CAI)",
+      "difficulty": "challenging",
+      "difficultyNote": "Walking line has short cabled bits; the Via delle Bocchette is a serious via ferrata alternative",
+      "booking": "Book rifugi directly; Tuckett, Brentei and Pedrotti fill early",
+      "link": "https://www.campigliodolomiti.it/en/routes-trails/dolomiti-brenta-trek-a-11-stages-loop-trail-around-the-brenta-group",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://bookatrekking.com/en/blog/brenta-dolomites/",
+        "https://www.dolomiti.it/en/trekking/dolomiti-brenta-trek"
+      ]
+    },
+    {
       "id": "carros-de-foc",
       "name": "Carros de Foc",
       "region": "Aigüestortes, Catalan Pyrenees",
@@ -247,6 +289,91 @@
       "lastChecked": "2026-11-16",
       "sources": [
         "https://www.carrosdefoc.com/es/carros-de-foc/"
+      ]
+    },
+    {
+      "id": "cavalls-del-vent",
+      "name": "Cavalls del Vent",
+      "region": "Cadí-Moixeró, Catalonia",
+      "countries": [
+        "Spain"
+      ],
+      "start": "Refugi Lluís Estasen",
+      "end": "Refugi Lluís Estasen",
+      "distance": 84.2,
+      "elevationGain": 5600,
+      "highestPoint": 2513,
+      "highestPointName": "Refugi Niu de l'Àliga (Tosa d'Alp)",
+      "days": [
+        4,
+        7
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Official season about 1 Jun – end Sep",
+      "accommodation": "Guarded refuges (7–8)",
+      "difficulty": "challenging",
+      "difficultyNote": "Waymarked loop, long days, nothing technical; start at any refuge, either direction",
+      "booking": "Mandatory booking via cavallsdelvent.com; opens around mid-Dec. No wild camping",
+      "link": "https://www.cavallsdelvent.com/en/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.cavallsdelvent.com/itinerario/",
+        "https://www.cavallsdelvent.com/faq/"
+      ]
+    },
+    {
+      "id": "coronallacs",
+      "name": "Coronallacs",
+      "region": "Andorra",
+      "countries": [
+        "Andorra"
+      ],
+      "start": "Escaldes-Engordany",
+      "end": "Escaldes-Engordany",
+      "distance": 92,
+      "elevationGain": 6449,
+      "highestPoint": 2810,
+      "highestPointName": "Collada dels Pessons",
+      "days": [
+        4,
+        5
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Refuges guarded about Jun–Sep; best late Jun to late Sep",
+      "accommodation": "Guarded refuges (4)",
+      "difficulty": "demanding",
+      "difficultyNote": "Rated very difficult: 5 stages of 13–22 km over high lake passes",
+      "booking": "Reserve every night ahead (coronallacs.com); collect the pass in Escaldes",
+      "link": "https://visitandorra.com/en/nature/hiking-route-coronallacs",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://visitandorra.com/en/nature/hiking-route-coronallacs",
+        "https://www.madriu-perafita-claror.ad/en/coronallacs"
       ]
     },
     {
@@ -291,6 +418,49 @@
       "lastChecked": "2026-11-16",
       "sources": [
         "https://www.bergwelten.com/a/die-alpenueberquerung-von-oberstdorf-nach-meran"
+      ]
+    },
+    {
+      "id": "giro-del-monviso",
+      "name": "Giro del Monviso",
+      "region": "Cottian Alps",
+      "countries": [
+        "Italy",
+        "France"
+      ],
+      "start": "Pian del Re",
+      "end": "Pian del Re",
+      "distance": 33,
+      "elevationGain": 2300,
+      "highestPoint": 2950,
+      "highestPointName": "Colle delle Traversette",
+      "days": [
+        3,
+        5
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Summer hut season; snow on passes above 2,700 m early on",
+      "accommodation": "Mountain rifugi / refuges",
+      "difficulty": "challenging",
+      "difficultyNote": "Passes around 2,800–2,950 m; optional Buco di Viso tunnel. Official variants run 33–61 km",
+      "booking": "Book each rifugio directly",
+      "link": "https://www.girodelmonviso.eu/gtm",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.girodelmonviso.eu/gtm",
+        "https://www.parcomonviso.eu/media/eaf40be.pdf"
       ]
     },
     {
@@ -421,6 +591,49 @@
       "sources": [
         "https://seu.conselldemallorca.net/refugis/en/ruta/",
         "https://www.cicerone.co.uk/trekking-in-mallorca"
+      ]
+    },
+    {
+      "id": "grp-andorra",
+      "name": "GRP d'Andorra",
+      "region": "Andorra",
+      "countries": [
+        "Andorra"
+      ],
+      "start": "Aixovall",
+      "end": "Aixovall",
+      "distance": 110,
+      "elevationGain": 8700,
+      "highestPoint": 2829,
+      "highestPointName": "Below Collada dels Pessons",
+      "days": [
+        7,
+        7
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Mid-Jun to Oct, when passes are snow-free",
+      "accommodation": "Guarded refuges, free huts and hotels",
+      "difficulty": "demanding",
+      "difficultyNote": "Rough, steep, some chained sections; free huts need your own food and sleeping bag",
+      "booking": "Book refuges/hotels individually; free huts first come. Free refuge passport",
+      "link": "https://visitandorra.com/en/nature/grp-andorra-la-volta-a-tot-un-pais/",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://visitandorra.com/en/nature/grp-andorra-la-volta-a-tot-un-pais/",
+        "https://travesiapirenaica.com/en/grp-lap-of-andorra/"
       ]
     },
     {
@@ -674,6 +887,131 @@
       ]
     },
     {
+      "id": "porta-del-cel",
+      "name": "Porta del Cel",
+      "region": "Pallars Sobirà, Catalonia",
+      "countries": [
+        "Spain",
+        "France"
+      ],
+      "start": "Tavascan",
+      "end": "Tavascan",
+      "distance": 64,
+      "elevationGain": 5500,
+      "highestPoint": 3143,
+      "highestPointName": "Pica d'Estats",
+      "days": [
+        4,
+        5
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Best Jul–Sep; snow on high cols early in summer",
+      "accommodation": "Guarded refuges (Certascan, Pinet, Vallferrera)",
+      "difficulty": "demanding",
+      "difficultyNote": "Summits Pica d'Estats; some pathless sections and a river crossing",
+      "booking": "No central booking; book each refuge directly",
+      "link": null,
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://travesiapirenaica.com/en/cell-door/",
+        "https://bookatrekking.com/en/trek/porta-del-cel-4-day-hut-to-hut-trek/"
+      ]
+    },
+    {
+      "id": "sentiero-roma",
+      "name": "Sentiero Roma",
+      "region": "Val Masino, Lombardy",
+      "countries": [
+        "Italy"
+      ],
+      "start": "Novate Mezzola",
+      "end": "Chiareggio",
+      "distance": 54,
+      "elevationGain": 5082,
+      "highestPoint": 2950,
+      "highestPointName": "Passo del Cameraccio",
+      "days": [
+        4,
+        6
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Rifugi staffed about Jul–Sep; snowfields early in the season",
+      "accommodation": "CAI rifugi and bivouacs",
+      "difficulty": "demanding",
+      "difficultyNote": "EEA: granite passes with chains and fixed ropes; steep exposed descents",
+      "booking": "Book via CAI prenotarifugi or each hut",
+      "link": "https://www.prenotarifugi.cai.it/en/?p=3763",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.prenotarifugi.cai.it/en/?p=3763",
+        "https://www.bormio.eu/en/itinerari/cammino/sentiero-roma-integrale-in-valtellina"
+      ]
+    },
+    {
+      "id": "seven-rila-lakes-rila-monastery",
+      "name": "Seven Rila Lakes → Rila Monastery",
+      "region": "Rila Mountains",
+      "countries": [
+        "Bulgaria"
+      ],
+      "start": "Rila Lakes Hut",
+      "end": "Rila Monastery",
+      "distance": null,
+      "elevationGain": 1300,
+      "highestPoint": 2600,
+      "highestPointName": "Razdela pass",
+      "days": [
+        2,
+        3
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonNote": "Jun–Oct; snow on the ridge in June",
+      "accommodation": "Mountain huts (e.g. Ivan Vazov hut)",
+      "difficulty": "challenging",
+      "difficultyNote": "Ridge walk then a long, steep descent to the monastery",
+      "booking": "Basic huts, book directly; chairlift access from Pionerska hut",
+      "link": null,
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://bulguides.com/product/rila-lakes-monastery-selfguided/"
+      ]
+    },
+    {
       "id": "stubai-hohenweg",
       "name": "Stubai Höhenweg",
       "region": "Stubai Alps",
@@ -713,6 +1051,91 @@
       "sources": [
         "https://www.tirol.at/aktivitaeten/sport/wandern/wandertouren/stubaier-hoehenweg-variante-1-starkenburger-huette-innsbrucker-huette",
         "https://www.bergwelten.com/a/der-stubaier-hoehenweg"
+      ]
+    },
+    {
+      "id": "tatranska-magistrala",
+      "name": "Tatranská magistrála",
+      "region": "High Tatras",
+      "countries": [
+        "Slovakia"
+      ],
+      "start": "Ždiar",
+      "end": "Podbanské",
+      "distance": 65.5,
+      "elevationGain": 2342,
+      "highestPoint": 2038,
+      "highestPointName": "Veľká Svišťovka",
+      "days": [
+        3,
+        5
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonNote": "Mid/late Jun to Oct; higher trails close 1 Nov",
+      "accommodation": "Mountain chalets (chaty) and hotels",
+      "difficulty": "moderate",
+      "difficultyNote": "Mostly rocky and forest path; chained section below Veľká Svišťovka",
+      "booking": "Book each chalet directly",
+      "link": "https://tatry.sk/en/tatranska-magistrala-part-one",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://tatry.sk/en/tatranska-magistrala-part-one",
+        "https://tatry.sk/en/tatranska-magistrala-part-four"
+      ]
+    },
+    {
+      "id": "tour-des-dents-du-midi",
+      "name": "Tour des Dents du Midi",
+      "region": "Chablais, Valais",
+      "countries": [
+        "Switzerland"
+      ],
+      "start": "Champéry",
+      "end": "Champéry",
+      "distance": 46,
+      "elevationGain": null,
+      "highestPoint": 2494,
+      "highestPointName": "Col de Susanfe",
+      "days": [
+        2,
+        4
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seasonNote": "Jun–Oct depending on snow. Cabane de Susanfe closed until end 2027 (diversion)",
+      "accommodation": "Mountain huts and alpine inns",
+      "difficulty": "challenging",
+      "difficultyNote": "Steep, chains near Col de Susanfe and Pas d'Encel. Official 6,700 m is up + down combined",
+      "booking": "Book each hut or inn directly; start anywhere on the loop",
+      "link": "https://www.dentsdumidi.ch/fr/",
+      "terrain": [
+        "mountain",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://www.dentsdumidi.ch/fr/le-parcours/",
+        "https://www.valais.ch/fr/explorer/activites/randonnees/tours/tour-des-dents-du-midi"
       ]
     },
     {
@@ -760,6 +1183,47 @@
       ]
     },
     {
+      "id": "tour-du-vignemale",
+      "name": "Tour du Vignemale",
+      "region": "Gavarnie / Ordesa, Pyrenees",
+      "countries": [
+        "France",
+        "Spain"
+      ],
+      "start": "Vallée d'Ossoue",
+      "end": "Vallée d'Ossoue",
+      "distance": 39.2,
+      "elevationGain": 2569,
+      "highestPoint": 2726,
+      "highestPointName": "Hourquette d'Ossoue",
+      "days": [
+        3,
+        4
+      ],
+      "season": [
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "Official: early Jul to late Sep",
+      "accommodation": "Refuges (Bujaruelo, Oulettes de Gaube, Baysellance)",
+      "difficulty": "challenging",
+      "difficultyNote": "Rated difficult; Col des Mulets section unmarked. Passes below the Ossoue glacier",
+      "booking": "Book each refuge (FFCAM huts online); bivouac only 19:00–09:00 in the park",
+      "link": "https://rando.valleesdegavarnie.com/trek/27863-Le-tour-du-Vignemale-en-3-jours",
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://rando.valleesdegavarnie.com/trek/27863-Le-tour-du-Vignemale-en-3-jours"
+      ]
+    },
+    {
       "id": "tour-monte-rosa",
       "name": "Tour Monte Rosa",
       "region": "Monte Rosa massif",
@@ -800,6 +1264,49 @@
       "sources": [
         "https://tmr-matterhorn.ch/en/",
         "https://zermatt.swiss/en/Media/Planning-hikes-tours/Tour-Monte-Rosa-Matterhorn"
+      ]
+    },
+    {
+      "id": "triglav-lakes-loop",
+      "name": "Triglav Lakes hut loop",
+      "region": "Julian Alps",
+      "countries": [
+        "Slovenia"
+      ],
+      "start": "Stara Fužina",
+      "end": "Stara Fužina",
+      "distance": 39.2,
+      "elevationGain": 2450,
+      "highestPoint": 2358,
+      "highestPointName": "Hribarice saddle",
+      "days": [
+        3,
+        4
+      ],
+      "season": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "seasonNote": "High huts open about late Jun to late Sep",
+      "accommodation": "PZS alpine huts",
+      "difficulty": "challenging",
+      "difficultyNote": "Big first-day climb; scree and light scrambling at Hribarice. Triglav summit optional",
+      "booking": "Book huts directly; ahead in Jul–Aug",
+      "link": null,
+      "terrain": [
+        "mountain",
+        "highAltitude",
+        "singleTrack",
+        "hikingTrail",
+        "woods"
+      ],
+      "done": false,
+      "lastChecked": "2026-11-16",
+      "sources": [
+        "https://bookatrekking.com/en/trek/triglav-national-park-adventure-4-days",
+        "https://www.hike.uno/hiking_tour/koca_pri_savici_vrh_hribaric/1/1539/2704"
       ]
     },
     {

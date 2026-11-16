@@ -258,6 +258,7 @@ a.map:hover { text-decoration: underline; }
 
 /* Hut to Hut page */
 .b-done { color: var(--lottery); background: var(--lottery-bg); margin-left: 6px; vertical-align: 1px; }
+.b-short { color: var(--text); background: var(--closed-bg); border: 1px solid var(--border); margin-left: 6px; vertical-align: 1px; }
 .d-moderate { color: var(--open); background: var(--open-bg); }
 .d-challenging { color: var(--soon); background: var(--soon-bg); }
 .d-demanding { color: var(--sold); background: var(--sold-bg); }
