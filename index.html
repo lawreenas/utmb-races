@@ -4,8 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UTMB Races</title>
+  <meta name="description" content="Upcoming UTMB World Series races and their registration availability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, World!</h1>
+  <header class="top">
+    <div>
+      <h1>UTMB Races</h1>
+      <p class="meta" id="meta">Loading…</p>
+    </div>
+    <button id="refresh" class="btn primary" type="button">Refresh from UTMB</button>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="row">
+      <input id="q" type="search" placeholder="Search race, event or location…" autocomplete="off">
+      <select id="country" aria-label="Country"><option value="">All countries</option></select>
+      <button id="reset" class="btn" type="button">Reset</button>
+    </div>
+
+    <div class="group"><span class="label">Availability</span><div class="chips" id="f-status"></div></div>
+    <div class="group"><span class="label">Continent</span><div class="chips" id="f-continent"></div></div>
+    <div class="group"><span class="label">Category</span><div class="chips" id="f-category"></div></div>
+
+    <details class="more">
+      <summary>More filters</summary>
+      <div class="ranges">
+        <label>From <input id="dateFrom" type="date"></label>
+        <label>To <input id="dateTo" type="date"></label>
+        <label>Distance km <span class="pair"><input id="distMin" type="number" min="0" placeholder="min"><input id="distMax" type="number" min="0" placeholder="max"></span></label>
+        <label>Elevation m <span class="pair"><input id="elevMin" type="number" min="0" placeholder="min"><input id="elevMax" type="number" min="0" placeholder="max"></span></label>
+        <label>Running Stones ≥ <input id="stonesMin" type="number" min="0" placeholder="any"></label>
+        <label class="check"><input id="past" type="checkbox"> Include past races</label>
+      </div>
+      <div class="group"><span class="label">Terrain</span><div class="chips" id="f-terrain"></div></div>
+    </details>
+  </section>
+
+  <main>
+    <p class="count" id="count"></p>
+    <div class="table-wrap">
+      <table id="table">
+        <thead>
+          <tr>
+            <th data-sort="date">Date</th>
+            <th data-sort="event">Race</th>
+            <th data-sort="country">Location</th>
+            <th data-sort="distance" class="num">Distance</th>
+            <th data-sort="elevationGain" class="num">D+</th>
+            <th data-sort="category">Category</th>
+            <th data-sort="runningStones" class="num">Stones</th>
+            <th data-sort="status">Availability</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>No races match these filters.</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="geo.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
