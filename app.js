@@ -3,6 +3,7 @@
   const SNAPSHOT_URL = 'data/races.json';
   const UTMB_URL = 'https://api.utmb.world/search/races?lang=en&limit=300';
   const LS_KEY = 'utmb-races:cache:v1';
+  const LIKES_KEY = 'utmb-races:likes:v1';
 
   const STATUS = {
     registration_open: 'Open',
@@ -20,6 +21,7 @@
 
   let races = [];
   let dataInfo = null;
+  const likes = loadLikes();
   const filters = defaultFilters();
   let sort = { key: 'date', dir: 1 };
 
@@ -27,7 +29,7 @@
     return {
       q: '', country: '', status: [], continent: [], category: [], terrain: [],
       dateFrom: '', dateTo: '', distMin: '', distMax: '', elevMin: '', elevMax: '', stonesMin: '',
-      past: false,
+      past: false, liked: false,
     };
   }
 
@@ -109,6 +111,15 @@
 
   function saveLocal(data) {
     try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch { /* storage unavailable */ }
+  }
+
+  function loadLikes() {
+    try { return new Set(JSON.parse(localStorage.getItem(LIKES_KEY)) || []); } catch { return new Set(); }
+  }
+
+  function toggleLike(id) {
+    if (likes.has(id)) likes.delete(id); else likes.add(id);
+    try { localStorage.setItem(LIKES_KEY, JSON.stringify([...likes])); } catch { /* storage unavailable */ }
   }
 
   async function getJSON(url) {
@@ -227,6 +238,7 @@
     const num = (v) => (v === '' ? null : Number(v));
     const inRange = (v, min, max) => (min == null || (v != null && v >= min)) && (max == null || (v != null && v <= max));
 
+    if (f.liked && !likes.has(String(r.id))) return false;
     if (!f.past && r.date && r.date < today) return false;
     if (f.q && !f.q.toLowerCase().split(/\s+/).every((w) => r.search.includes(w))) return false;
     if (f.country && r.country !== f.country) return false;
@@ -245,6 +257,7 @@
   function compare(a, b) {
     const k = sort.key;
     let x = a[k], y = b[k];
+    if (k === 'liked') { x = likes.has(String(a.id)) ? 0 : 1; y = likes.has(String(b.id)) ? 0 : 1; }
     if (k === 'date') { x = x ? x.getTime() : null; y = y ? y.getTime() : null; }
     if (k === 'category') { x = CATEGORY_ORDER.indexOf(x); y = CATEGORY_ORDER.indexOf(y); }
     if (k === 'status') { x = Object.keys(STATUS).indexOf(x); y = Object.keys(STATUS).indexOf(y); }
@@ -264,8 +277,12 @@
   function render() {
     const list = races.filter(matches).sort(compare);
 
-    $('rows').innerHTML = list.map((r) => `
+    $('rows').innerHTML = list.map((r) => {
+      const liked = likes.has(String(r.id));
+      return `
       <tr>
+        <td class="like"><button type="button" class="heart" data-id="${esc(r.id)}" aria-pressed="${liked}"
+          aria-label="${liked ? 'Unlike' : 'Like'} ${esc(r.race || r.event)}">${liked ? '♥' : '♡'}</button></td>
         <td class="date">${fmtDate(r.date)}</td>
         <td class="race">
           ${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.race || r.event)}</a>` : esc(r.race || r.event)}
@@ -277,8 +294,16 @@
         <td class="cat">${esc(r.category.toUpperCase())}</td>
         <td class="num stones">${r.runningStones ?? ''}</td>
         <td class="status"><span class="badge s-${esc(r.status)}">${esc(STATUS[r.status] || r.status)}</span></td>
-      </tr>`).join('');
+      </tr>`;
+    }).join('');
 
+    const likedCount = races.filter((r) => likes.has(String(r.id))).length;
+    $('liked-n').textContent = likedCount || '';
+    $('liked').setAttribute('aria-pressed', filters.liked);
+
+    $('empty').textContent = filters.liked && !likedCount
+      ? 'No liked races yet — tap ♡ on a race to save it.'
+      : 'No races match these filters.';
     $('empty').hidden = list.length > 0 || !races.length;
     $('count').textContent = races.length ? `${list.length} of ${races.length} races` : '';
 
@@ -314,6 +339,7 @@
     TEXT_KEYS.forEach((k) => { if (p.has(k)) filters[k] = p.get(k); });
     LIST_KEYS.forEach((k) => { if (p.get(k)) filters[k] = p.get(k).split(','); });
     filters.past = p.get('past') === '1';
+    filters.liked = p.get('liked') === '1';
     if (p.get('sort')) {
       const [key, dir] = p.get('sort').split(':');
       sort = { key, dir: dir === 'desc' ? -1 : 1 };
@@ -325,6 +351,7 @@
     TEXT_KEYS.forEach((k) => { if (filters[k]) p.set(k, filters[k]); });
     LIST_KEYS.forEach((k) => { if (filters[k].length) p.set(k, filters[k].join(',')); });
     if (filters.past) p.set('past', '1');
+    if (filters.liked) p.set('liked', '1');
     if (sort.key !== 'date' || sort.dir !== 1) p.set('sort', `${sort.key}:${sort.dir > 0 ? 'asc' : 'desc'}`);
     const qs = p.toString();
     history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
@@ -341,6 +368,14 @@
 
     TEXT_KEYS.forEach((k) => $(k).addEventListener('input', (e) => { filters[k] = e.target.value.trim(); render(); }));
     $('past').addEventListener('change', (e) => { filters.past = e.target.checked; render(); });
+    $('liked').addEventListener('click', () => { filters.liked = !filters.liked; render(); });
+
+    $('rows').addEventListener('click', (e) => {
+      const heart = e.target.closest('.heart');
+      if (!heart) return;
+      toggleLike(heart.dataset.id);
+      render();
+    });
 
     document.querySelector('.filters').addEventListener('click', (e) => {
       const chip = e.target.closest('.chip');

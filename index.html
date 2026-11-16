@@ -23,6 +23,7 @@
     <div class="row">
       <input id="q" type="search" placeholder="Search race, event or location…" autocomplete="off">
       <select id="country" aria-label="Country"><option value="">All countries</option></select>
+      <button id="liked" class="btn like-filter" type="button" aria-pressed="false">♥ Liked <span class="n" id="liked-n"></span></button>
       <button id="reset" class="btn" type="button">Reset</button>
     </div>
 
@@ -50,6 +51,7 @@
       <table id="table">
         <thead>
           <tr>
+            <th data-sort="liked" class="like" aria-label="Liked">♥</th>
             <th data-sort="date">Date</th>
             <th data-sort="event">Race</th>
             <th data-sort="country">Location</th>

@@ -18,6 +18,7 @@ Live: https://lawreenas.github.io/utmb-races/
   | Closed | `registration_closed` |
   | Unknown | no status returned |
 - Sortable by any column (click a header; click again to reverse).
+- **Likes**: tap ♡ on a race to like it, and tap again to unlike. The **♥ Liked** button shows only liked races and how many there are. Sorting by the ♥ column puts liked races first. Likes are saved in your browser (localStorage, by UTMB race id), so they're personal and stay through data refreshes, but they don't sync between devices or browsers.
 - Responsive: a table on desktop, cards on phones. Follows the system light/dark theme.
 
 ### Filters
@@ -34,6 +35,7 @@ All filters combine (AND). Within one chip group, the selected values combine as
   - minimum Running Stones
   - terrain (UTMB "playgrounds", such as mountain, glacier, jungle or night time)
   - "Include past races"
+- **Liked**: show only the races you liked.
 - **Reset** clears all filters.
 - Filters and sort order are kept in the URL, so you can bookmark or share a filtered view.
 

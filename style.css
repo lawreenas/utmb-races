@@ -16,6 +16,7 @@
   --sold-bg: #fee2e2;
   --closed: #57534e;
   --closed-bg: #f5f5f4;
+  --like: #e11d48;
   --radius: 8px;
 }
 
@@ -38,6 +39,7 @@
     --sold-bg: #7f1d1d55;
     --closed: #a8a29e;
     --closed-bg: #29252480;
+    --like: #fb7185;
   }
 }
 
@@ -178,6 +180,25 @@ td.date { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .s-registration_sold_out { color: var(--sold); background: var(--sold-bg); }
 .s-registration_closed, .s-unknown { color: var(--closed); background: var(--closed-bg); }
 
+th.like, td.like { width: 1%; padding-right: 0; text-align: center; }
+.heart {
+  font: inherit;
+  font-size: 17px;
+  line-height: 1;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.heart:hover { color: var(--like); }
+.heart[aria-pressed=true] { color: var(--like); }
+
+.like-filter .n { opacity: 0.6; font-size: 12px; }
+.like-filter .n:empty { display: none; }
+.like-filter[aria-pressed=true] { background: var(--like); border-color: var(--like); color: #fff; }
+
 .empty { text-align: center; color: var(--muted); padding: 32px 0; }
 
 .toast {
@@ -205,6 +226,7 @@ td.date { white-space: nowrap; font-variant-numeric: tabular-nums; }
   td { border: 0; padding: 0; }
   td.race { padding-right: 100px; margin-bottom: 4px; }
   td.status { position: absolute; top: 12px; right: 12px; }
+  td.like { position: absolute; bottom: 8px; right: 8px; width: auto; padding: 0; }
   td.num, td.cat { display: inline; text-align: left; color: var(--muted); font-size: 12px; }
   td.num:not(.stones):not(:empty)::after, td.cat:not(:empty)::after { content: " · "; }
   td.stones:not(:empty)::before { content: "Stones "; }
